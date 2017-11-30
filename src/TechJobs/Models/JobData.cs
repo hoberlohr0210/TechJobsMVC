@@ -27,6 +27,7 @@ namespace TechJobs.Models
             LoadData();
 
             List<string> values = new List<string>();
+            
 
             foreach (Dictionary<string, string> job in AllJobs)
             {
@@ -39,7 +40,8 @@ namespace TechJobs.Models
             }
 
             // Bonus mission: sort results alphabetically
-            values.Sort();
+            //var jobDictionary = from entry in job orderby entry.Value ascending select entry;
+            values.Sort();            
             return values;
         }
 
@@ -60,7 +62,7 @@ namespace TechJobs.Models
                 {
                     string aValue = row[key];
 
-                    if (aValue.ToLower().Contains(value.ToLower()))
+                    if (aValue.ToLower().Contains(aValue.ToLower()))
                     {
                         jobs.Add(row);
 

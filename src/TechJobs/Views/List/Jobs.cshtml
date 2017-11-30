@@ -2,6 +2,23 @@
 
 <h3>@ViewBag.jobs.Count Result(s)</h3>
 
-@{ 
-    // TODO #3 - Use the same list display from Views/Search/Index.cshtml 
+@{
+// TODO #3 - Use the same list display from Views/Search/Index.cshtml
+    @foreach (Dictionary<string, string> listing in ViewBag.jobs)
+    {
+        <table class="job-listing">
+
+            @foreach (KeyValuePair<string, string> newListing in listing)
+            {
+
+                <tr>
+                    <td width="150px"> @newListing.Key</td>
+                    <td width="300px"> @newListing.Value</td>
+                </tr>
+
+            }
+            </table>
+
+    }
+
 }
