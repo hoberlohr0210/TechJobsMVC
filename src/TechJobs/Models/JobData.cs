@@ -62,7 +62,7 @@ namespace TechJobs.Models
                 {
                     string aValue = row[key];
 
-                    if (aValue.ToLower().Contains(aValue.ToLower()))
+                    if (aValue.ToLower().Contains(value.ToLower()))
                     {
                         jobs.Add(row);
 
